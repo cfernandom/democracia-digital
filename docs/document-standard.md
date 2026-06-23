@@ -1,13 +1,41 @@
-# Estándar de Documentación Institucional
-
-**Documento ID:** LTA-GOV-001
-**Versión:** 0.1.0
-**Estado:** Draft
-**Tipo:** Governance
-**Clasificación:** Public
-**Fecha de creación:** 2026-06-22
-
 ---
+title: "Estándar de Documentación Institucional"
+
+document_id: "LTA-GOV-001"
+version: "0.1.1"
+status: "draft"
+document_type: "governance"
+classification: "public"
+
+authors:
+  - "Equipo fundador"
+
+owner: "Gobernanza Institucional"
+
+created: "2026-06-22"
+updated: "2026-06-22"
+
+review_cycle: "annual"
+
+tags:
+  - documentation
+  - governance
+  - standards
+  - metadata
+
+license: "CC BY 4.0"
+
+approval:
+  approved_by: null
+  approved_date: null
+
+related_documents:
+  - "LTA-PRINCIPLES-001"
+
+supersedes: null
+---
+
+# Estándar de Documentación Institucional
 
 # 1. Propósito
 
@@ -329,4 +357,6 @@ Este estándar permanecerá vigente hasta que sea reemplazado por una versión p
 | Versión | Fecha      | Descripción       |
 | ------- | ---------- | ----------------- |
 | 0.1.0   | 2026-06-22 | Documento inicial |
+| 0.1.1   | 2026-06-23 | Inclusión de metadata obligatoria conforme al estándar definido |
 |         |            |                   |
+
