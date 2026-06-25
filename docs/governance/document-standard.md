@@ -2,7 +2,7 @@
 title: "Estándar de Documentación Institucional"
 
 document_id: "LTA-GOV-001"
-version: "0.1.1"
+version: "0.1.2"
 status: "draft"
 document_type: "governance"
 classification: "public"
@@ -13,7 +13,7 @@ authors:
 owner: "Gobernanza Institucional"
 
 created: "2026-06-22"
-updated: "2026-06-22"
+updated: "2026-06-25"
 
 review_cycle: "annual"
 
@@ -37,7 +37,7 @@ supersedes: null
 
 # Estándar de Documentación Institucional
 
-# 1. Propósito
+## 1. Propósito
 
 Este documento define los estándares de estructura, metadatos, versionamiento, trazabilidad y gobernanza documental utilizados por el Laboratorio de Transparencia Algorítmica (LTA).
 
@@ -45,7 +45,7 @@ Su objetivo es garantizar que toda documentación institucional, técnica, inves
 
 ---
 
-# 2. Alcance
+## 2. Alcance
 
 Este estándar aplica a:
 
@@ -59,33 +59,40 @@ Este estándar aplica a:
 
 Todo documento oficial deberá cumplir este estándar salvo aprobación explícita de una excepción.
 
+### Nota de bootstrap institucional
+
+Este documento constituye el estándar inicial de documentación del proyecto.
+Durante la fase fundacional, su aprobación se considera provisional mediante
+aceptación del equipo fundador y deberá ser ratificada mediante el mecanismo
+formal de gobernanza cuando este sea establecido.
+
 ---
 
-# 3. Principios
+## 3. Principios
 
-## Transparencia
+### Transparencia
 
 Toda información pública debe poder ser auditada por terceros.
 
-## Trazabilidad
+### Trazabilidad
 
 Toda modificación relevante debe quedar registrada.
 
-## Reproducibilidad
+### Reproducibilidad
 
 Las investigaciones y análisis deberán incluir metodología y fuentes.
 
-## Responsabilidad
+### Responsabilidad
 
 Todo documento tendrá un responsable claramente identificado.
 
-## Versionamiento
+### Versionamiento
 
 Los cambios deberán documentarse mediante un esquema formal de versiones.
 
 ---
 
-# 4. Formato de almacenamiento
+## 4. Formato de almacenamiento
 
 La documentación institucional deberá almacenarse preferiblemente en formato Markdown (`.md`).
 
@@ -101,7 +108,7 @@ La versión fuente siempre será la versión Markdown.
 
 ---
 
-# 5. Metadatos obligatorios
+## 5. Metadatos obligatorios
 
 Todos los documentos deberán incluir un bloque YAML Front Matter al inicio.
 
@@ -145,7 +152,7 @@ supersedes: null
 
 ---
 
-# 6. Identificadores documentales
+## 6. Identificadores documentales
 
 Cada documento deberá poseer un identificador único.
 
@@ -168,9 +175,9 @@ LTA-TECH-001
 
 ---
 
-# 7. Categorías documentales
+## 7. Categorías documentales
 
-## Charter
+### Charter
 
 Documentos fundacionales.
 
@@ -182,7 +189,7 @@ Ejemplos:
 
 ---
 
-## Governance
+### Governance
 
 Gobernanza institucional.
 
@@ -194,37 +201,37 @@ Ejemplos:
 
 ---
 
-## Research
+### Research
 
 Investigaciones y estudios.
 
 ---
 
-## Policy
+### Policy
 
 Propuestas regulatorias o normativas.
 
 ---
 
-## Technical
+### Technical
 
 Arquitectura, software y especificaciones técnicas.
 
 ---
 
-## Operational
+### Operational
 
 Procedimientos y manuales internos.
 
 ---
 
-## Position
+### Position
 
 Posiciones institucionales públicas.
 
 ---
 
-# 8. Estados documentales
+## 8. Estados documentales
 
 Todo documento deberá encontrarse en uno de los siguientes estados:
 
@@ -238,23 +245,23 @@ Todo documento deberá encontrarse en uno de los siguientes estados:
 
 ---
 
-# 9. Clasificación de información
+## 9. Clasificación de información
 
-## Public
+### Public
 
 Información abierta al público.
 
-## Internal
+### Internal
 
 Uso interno de colaboradores.
 
-## Confidential
+### Confidential
 
 Acceso restringido.
 
 ---
 
-# 10. Versionamiento
+## 10. Versionamiento
 
 Se utilizará Semantic Versioning.
 
@@ -273,21 +280,21 @@ Ejemplos:
 2.0.0
 ```
 
-### MAJOR
+#### MAJOR
 
 Cambios incompatibles o redefiniciones importantes.
 
-### MINOR
+#### MINOR
 
 Nuevas secciones o ampliaciones.
 
-### PATCH
+#### PATCH
 
 Correcciones menores.
 
 ---
 
-# 11. Historial de cambios
+## 11. Historial de cambios
 
 Todos los documentos deberán mantener una sección de cambios relevantes.
 
@@ -296,12 +303,12 @@ Ejemplo:
 | Versión | Fecha      | Descripción                            |
 | ------- | ---------- | -------------------------------------- |
 | 0.1.0   | 2026-06-22 | Creación inicial                       |
-| 0.2.0   | 2026-07-05 | Inclusión de política de clasificación |
+| 0.2.0   | 2026-07-05 | Incorporación de política de clasificación |
 | 1.0.0   | 2026-07-20 | Aprobación institucional               |
 
 ---
 
-# 12. Documentación de investigaciones
+## 12. Documentación de investigaciones
 
 Los documentos clasificados como Research deberán incluir:
 
@@ -320,7 +327,7 @@ Cuando sea posible:
 
 ---
 
-# 13. Aprobación institucional
+## 13. Aprobación institucional
 
 Los documentos considerados oficiales requerirán:
 
@@ -333,7 +340,7 @@ La aprobación deberá quedar registrada en los metadatos.
 
 ---
 
-# 14. Revisión periódica
+## 14. Revisión periódica
 
 Cada documento deberá definir una periodicidad de revisión.
 
@@ -341,22 +348,23 @@ Ejemplos:
 
 * annual
 * biennial
-* every_6_months
+* quarterly
 * none
 
 ---
 
-# 15. Vigencia
+## 15. Vigencia
 
 Este estándar permanecerá vigente hasta que sea reemplazado por una versión posterior aprobada conforme a los mecanismos de gobernanza institucional.
 
 ---
 
-# Historial de cambios
+## 16. Historial de cambios
 
 | Versión | Fecha      | Descripción       |
 | ------- | ---------- | ----------------- |
 | 0.1.0   | 2026-06-22 | Documento inicial |
 | 0.1.1   | 2026-06-23 | Inclusión de metadata obligatoria conforme al estándar definido |
-|         |            |                   |
+| 0.1.2   | 2026-06-25 | Corrección de inconsistencias internas y normalización documental |
 
+---
