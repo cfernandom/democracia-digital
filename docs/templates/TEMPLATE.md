@@ -24,9 +24,9 @@ tags:
 license: "CC BY 4.0"
 
 approval:
-  status: ""
-  approved_by: []
-  approved_date: ""
+  status: "pending"
+  # approved_by: []      # obligatorio solo si approval.status es provisional o approved
+  # approved_date: ""    # obligatorio solo si approval.status es provisional o approved
 
 related_documents: []
 ---
@@ -48,9 +48,9 @@ related_documents: []
 | `owner` | Área responsable |
 | `created` | Fecha `YYYY-MM-DD` |
 | `updated` | Fecha `YYYY-MM-DD` |
-| `approval.status` | `pending`, `provisional`, `approved` o `rejected` |
-| `approval.approved_by` | Lista de aprobadores. Obligatorio si `status` es `provisional` o `approved`. Puede ser `[]` si `status: pending`. |
-| `approval.approved_date` | Fecha `YYYY-MM-DD`. Obligatorio si `status` es `provisional` o `approved`. Puede ser `""` si `status: pending`. |
+| `approval.status` | `pending`, `provisional` o `approved`. La combinación con `status` debe ajustarse a la matriz LTA-GOV-001 §8.3. Para `status: draft`, usar siempre `approval.status: pending`. Un documento rechazado en revisión no usa `rejected` en `approval.status`; transita a `draft` (devolución) o `archived` (descarte) conforme a LTA-GOV-001 §8.1. |
+| `approval.approved_by` | Lista de aprobadores. Obligatorio si `approval.status` es `provisional` o `approved`. Omitir el campo si `approval.status: pending` (no usar `[]` como sustituto de ausencia). |
+| `approval.approved_date` | Fecha `YYYY-MM-DD` válida. Obligatorio si `approval.status` es `provisional` o `approved`. Omitir el campo si `approval.status: pending` (no usar `""` como sustituto de ausencia). |
 
 ### Campos opcionales (pueden eliminarse si no aplican)
 
@@ -59,11 +59,11 @@ related_documents: []
 | `document_subtype` | Subtipo según categoría (ver LTA-GOV-001 §7.2). Si no se usa, eliminar la línea. |
 | `tags` | Lista de etiquetas. Si no se usa, dejar `[]` o eliminar. |
 | `related_documents` | Referencias a otros documentos. Si no se usa, dejar `[]` o eliminar. |
-| `translation_of` | Identificador del documento original normativo si este documento es una traducción. Si no aplica, eliminar la línea. |
+| `translation_of` | Marca la instancia idiomática como traducción. El valor es el mismo `document_id` del documento; no identifica un documento distinto. Si no aplica, eliminar la línea. (Ver LTA-GOV-001 §10.2) |
 
 ### Valores controlados
 
-Los campos `document_type`, `document_subtype`, `status`, `approval.status`, `review_cycle` y `classification` solo aceptan los valores definidos en LTA-GOV-001 §5.4. Los valores son sensibles a mayúsculas. Ejemplo: `"GOV"` válido, `"gov"` inválido. El campo `language` debe utilizar un código ISO 639-1 válido (ver LTA-GOV-001 §5.4).
+Los campos `document_type`, `document_subtype`, `status`, `approval.status`, `review_cycle`, `classification` y las relaciones de `related_documents` constituyen **conjuntos cerrados**: solo aceptan los valores definidos en LTA-GOV-001 §5.4 y §5.3. Cualquier incorporación, eliminación o renombrado requiere modificación formal del estándar (ver LTA-GOV-001 §11.2). Los valores son sensibles a mayúsculas. Ejemplo: `"GOV"` válido, `"gov"` inválido. El campo `language` es **conjunto abierto** y debe utilizar un código ISO 639-1 válido (ver LTA-GOV-001 §5.4).
 
 ## 1. Propósito
 
@@ -82,6 +82,8 @@ Los campos `document_type`, `document_subtype`, `status`, `approval.status`, `re
 ---
 
 ## Historial de cambios
+
+> **Nota**: opcional mientras el documento esté en `draft`. Obligatorio a partir de la primera publicación (`review` o `approved`). Ver LTA-GOV-001 §12.
 
 | Versión | Fecha | Descripción |
 | ------- | ----- | ----------- |
