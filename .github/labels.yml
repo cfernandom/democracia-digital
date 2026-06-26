@@ -1,0 +1,96 @@
+# Label configuration for Democracia Digital / LTA
+#
+# Categories:
+#   area/*    — organizational domain
+#   priority/* — urgency and attention level
+#   type/*    — nature of the work
+#
+# Flat labels (no namespace):
+#   good first issue — community onboarding
+#   help wanted      — external contribution call
+#
+# Source of truth: this file (declarativo manual)
+
+# ── Áreas ──────────────────────────────────────────────
+
+- name: area/governance
+  color: "0e8a16"
+  description: "Gobernanza institucional y procesos de decisión"
+
+- name: area/research
+  color: "1d76db"
+  description: "Investigaciones, estudios y publicaciones"
+
+- name: area/legal
+  color: "b60205"
+  description: "Análisis jurídico, normativa y regulación"
+
+- name: area/policy
+  color: "c2185b"
+  description: "Propuestas de política pública y documentos de posición"
+
+- name: area/technical
+  color: "006b75"
+  description: "Software, arquitectura e infraestructura"
+
+- name: area/data
+  color: "bfdadc"
+  description: "Datos, modelos y pipelines"
+
+- name: area/community
+  color: "5319e7"
+  description: "Comunidad, difusión y participación"
+
+# ── Prioridades ─────────────────────────────────────────
+
+- name: priority/critical
+  color: "b71c1c"
+  description: "Atención inmediata — bloquea trabajo esencial"
+
+- name: priority/high
+  color: "d93f0b"
+  description: "Prioridad alta — atender en el ciclo actual"
+
+- name: priority/medium
+  color: "fbca04"
+  description: "Prioridad media — planificar próximos ciclos"
+
+- name: priority/low
+  color: "cccccc"
+  description: "Prioridad baja — backlog sin urgencia"
+
+# ── Tipos ───────────────────────────────────────────────
+
+- name: type/bug
+  color: "d73a4a"
+  description: "Error técnico o comportamiento incorrecto"
+
+- name: type/feature
+  color: "a2eeef"
+  description: "Nueva funcionalidad o capacidad"
+
+- name: type/research
+  color: "c5def5"
+  description: "Investigación, análisis o estudio"
+
+- name: type/policy
+  color: "d4c5f9"
+  description: "Propuesta normativa o de política"
+
+- name: type/documentation
+  color: "0075ca"
+  description: "Creación o mejora de documentación"
+
+- name: type/discussion
+  color: "d876e3"
+  description: "Debate estratégico o decisión abierta"
+
+# ── Comunidad (planos) ──────────────────────────────────
+
+- name: good first issue
+  color: "7057ff"
+  description: "Ideal para quienes contribuyen por primera vez"
+
+- name: help wanted
+  color: "008672"
+  description: "Se busca colaboración externa"
