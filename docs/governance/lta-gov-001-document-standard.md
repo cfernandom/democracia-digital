@@ -2,7 +2,7 @@
 title: "Estándar de Documentación Institucional"
 
 document_id: "LTA-GOV-001"
-version: "0.3.0"
+version: "0.3.1"
 status: "draft"
 document_type: "GOV"
 document_subtype: "standard"
@@ -15,7 +15,7 @@ authors:
 owner: "Gobernanza Institucional"
 
 created: "2026-06-22"
-updated: "2026-06-25"
+updated: "2026-06-26"
 
 review_cycle: "annual"
 
@@ -30,9 +30,7 @@ license: "CC BY 4.0"
 approval:
   status: "pending"
 
-related_documents:
-  - id: "LTA-CHR-002"
-    relation: "references"
+related_documents: []
 ---
 
 # Estándar de Documentación Institucional
@@ -75,10 +73,7 @@ Quedan fuera del alcance de este estándar y no constituyen documentos oficiales
 
 ### Nota de bootstrap institucional
 
-Este documento constituye el estándar inicial de documentación del proyecto.
-Durante la fase fundacional, su aprobación se considera provisional mediante
-aceptación del equipo fundador y deberá ser ratificada mediante el mecanismo
-formal de gobernanza cuando este sea establecido.
+Este documento constituye el estándar inicial de documentación del proyecto. Durante la fase fundacional, su aprobación se considera provisional mediante aceptación del equipo fundador y deberá ser ratificada mediante el mecanismo formal de gobernanza cuando este sea establecido.
 
 ---
 
@@ -139,8 +134,8 @@ La interpretación semántica sigue RFC 2119. El presente estándar utiliza excl
             │               │               │
    Instancia idiom.    Instancia idiom.   ...
    (language=es)       (language=en)
-    │                       │
-    └──── metadata ────────┘
+     │                      │
+     └─── metadata ─────────┘
             version (§11)
             status (§8)
             approval (§14)
@@ -226,25 +221,25 @@ related_documents:
 | Campo              | Requerido | Descripción                                      |
 | ------------------ | --------- | ------------------------------------------------ |
 | title              | Sí        | Título del documento                             |
-| document_id        | Sí        | Identificador único (ver sección 6)              |
-| version            | Sí        | Versión semántica (ver sección 11)              |
-| status             | Sí        | Estado documental (ver sección 8)                |
-| document_type      | Sí        | Categoría documental (ver sección 7)             |
-| document_subtype   | No        | Subtipo dentro de la categoría. Cardinalidad 0..1: un documento puede tener como máximo un subtipo. Ver sección 7.2. |
-| classification     | Sí        | Nivel de acceso (ver sección 9)                  |
-| language           | Sí        | Idioma principal del documento (ver sección 10)  |
+| document_id        | Sí        | Identificador único (ver §6)                     |
+| version            | Sí        | Versión semántica (ver §11)                      |
+| status             | Sí        | Estado documental (ver §8)                       |
+| document_type      | Sí        | Categoría documental (ver §7)                    |
+| document_subtype   | No        | Subtipo dentro de la categoría. Cardinalidad 0..1: un documento puede tener como máximo un subtipo. Ver §7.2. |
+| classification     | Sí        | Nivel de acceso (ver §9)                         |
+| language           | Sí        | Idioma principal del documento (ver §10)         |
 | authors            | Sí        | Lista de autores                                 |
 | owner              | Sí        | Área responsable del documento                   |
 | created            | Sí        | Fecha de creación (YYYY-MM-DD)                   |
 | updated            | Sí        | Fecha de última modificación (YYYY-MM-DD)        |
-| review_cycle       | Sí        | Periodicidad de revisión (ver sección 15)        |
+| review_cycle       | Sí        | Periodicidad de revisión (ver §15)               |
 | tags               | No        | Etiquetas para clasificación temática            |
 | license            | Sí        | Licencia del documento                           |
-| approval           | Sí        | Estado de aprobación (ver sección 5.4)           |
-| related_documents  | No        | Documentos relacionados (ver sección 5.3)        |
-| translation_of     | No        | Marca que la instancia idiomática actual es una traducción. El valor es el `document_id` de la obra (el mismo del documento actual); no identifica un documento distinto. Cardinalidad 0..1. Ver sección 10.2. |
+| approval           | Sí        | Estado de aprobación (ver §5.4)                  |
+| related_documents  | No        | Documentos relacionados (ver §5.3)               |
+| translation_of     | No        | Marca que la instancia idiomática actual es una traducción. El valor es el `document_id` de la obra (el mismo del documento actual); no identifica un documento distinto. Cardinalidad 0..1. Ver §10.2. |
 
-Los campos controlados de metadata utilizan valores exactos definidos por este estándar. Los valores son sensibles a mayúsculas y deben emplear exclusivamente los códigos establecidos en la sección 5.4.
+Los campos controlados de metadata utilizan valores exactos definidos por este estándar. Los valores son sensibles a mayúsculas y deben emplear exclusivamente los códigos establecidos en §5.4.
 
 Ejemplo válido:
 
@@ -266,7 +261,7 @@ Reglas:
 
 - Un documento pertenece a una única categoría (`document_type`).
 - Un documento puede tener a lo sumo un subtipo (`document_subtype`).
-- Los subtipos válidos están definidos por cada categoría en la sección 7.2 y constituyen el conjunto oficial de subtipos permitidos. La incorporación de nuevos subtipos requiere actualización del presente estándar.
+- Los subtipos válidos están definidos por cada categoría en §7.2 y constituyen el conjunto oficial de subtipos permitidos. La incorporación de nuevos subtipos requiere actualización del presente estándar.
 - El campo es opcional pero recomendado cuando una categoría agrupa varios tipos de documento.
 
 Ejemplos:
@@ -280,16 +275,6 @@ document_subtype: "standard"
 document_type: "CHR"
 document_subtype: "vision"
 ```
-
-| Código | Subtipos válidos                             |
-| ------ | -------------------------------------------- |
-| CHR    | vision, mission, principles                  |
-| GOV    | statute, process, internal-rule, standard    |
-| RES    | study, report, analysis, dataset             |
-| POL    | regulatory-proposal, position-paper, comment |
-| TEC    | architecture, api-spec, runbook, adr         |
-| OPS    | procedure, manual, checklist, runbook        |
-| POS    | statement, communiqué, open-letter           |
 
 ### 5.3 Referencias entre documentos (`related_documents`)
 
@@ -310,9 +295,7 @@ Relaciones permitidas:
 | references   | El documento referencia o cita al documento indicado     |
 | depends_on   | El documento requiere del documento indicado             |
 | implements   | El documento implementa lo definido en el documento indicado |
-| supersedes   | El documento reemplaza al documento indicado             |
-
-**Reglas para `supersedes`**: ver sección 5.3.1.
+| supersedes   | El documento reemplaza al documento indicado(ver §5.3.1) |
 
 ### 5.3.1 Política de reemplazo de documentos
 
@@ -330,8 +313,7 @@ Al publicarse `A` con `status: approved`:
 4. `A` debe conservar la relación declarada durante toda su vigencia.
 5. Un documento solo puede declarar `relation: supersedes` como máximo una vez en `related_documents`.
 
-Para referencias no sustitutivas al documento anterior (citas, dependencias
-técnicas), usar `relation: references` o `relation: depends_on`.
+Para referencias no sustitutivas al documento anterior (citas, dependencias técnicas), usar `relation: references` o `relation: depends_on`.
 
 ---
 
@@ -426,7 +408,7 @@ Cada documento deberá poseer un identificador único.
 LTA-[CATEGORIA]-[NUMERO]
 ```
 
-Donde `[CATEGORIA]` es el código de tres letras de la categoría documental (ver sección 7.1).
+Donde `[CATEGORIA]` es el código de tres letras de la categoría documental (ver §7.1).
 
 Ejemplos válidos:
 
@@ -446,7 +428,7 @@ LTA-POS-001
 | ------------------------ | -------------------------------------------------------------- |
 | Prefijo obligatorio      | Todo identificador comienza con `LTA`                          |
 | Separador                | Los componentes se separan mediante guiones (`-`)              |
-| Categoría                | Código de tres letras en mayúsculas (ver tabla en sección 7.1) |
+| Categoría                | Código de tres letras en mayúsculas (ver tabla en §7.1) |
 | Caracteres de categoría  | Solo caracteres alfabéticos ASCII (A-Z)                        |
 | Número                   | Número entero positivo                                         |
 | Numeración               | Secuencial por categoría, sin reutilización                    |
@@ -462,17 +444,15 @@ Ejemplos inválidos:
 | `LTA_GOV_001`      | Separador incorrecto                  |
 | `LTA-GOV-🍕`       | Caracteres no ASCII                   |
 | `LTA-GOV-1`        | Número sin ancho fijo                 |
-| `LTA-GOV-0`        | Número no positivo                   |
+| `LTA-GOV-0`        | Número no positivo                    |
 
 ### 6.3 Asignación de identificadores
 
-La asignación de `document_id` es responsabilidad del órgano de gobernanza
-documental del LTA. Durante la fase fundacional, esta responsabilidad recae en
-el equipo fundador hasta que un órgano formal sea establecido.
+La asignación de `document_id` es responsabilidad del órgano de gobernanza documental del LTA. Durante la fase fundacional, esta responsabilidad recae en el equipo fundador hasta que un órgano formal sea establecido.
 
 Reglas:
 
-1. **Unicidad.** Ningún `document_id` puede asignarse a dos documentos distintos. La unicidad se entiende a nivel de par (`document_id`, `language`): no pueden existir dos documentos con el mismo `document_id` y el mismo `language` (ver sección 10.2 para el régimen de traducciones).
+1. **Unicidad.** Ningún `document_id` puede asignarse a dos documentos distintos. La unicidad se entiende a nivel de par (`document_id`, `language`): no pueden existir dos documentos con el mismo `document_id` y el mismo `language` (ver §10.2 para el régimen de traducciones).
 2. **No reutilización.** Un `document_id` asignado a un documento posteriormente `superseded` o `archived` no puede reasignarse a un nuevo documento. La numeración es estrictamente creciente por categoría.
 3. **Asignación centralizada.** Todo nuevo documento debe solicitar la asignación de su `document_id` al órgano responsable antes de su publicación.
 4. **Registro.** El órgano responsable mantiene un registro de identificadores emitidos que incluye como mínimo `document_id`, título, fecha de asignación y área solicitante.
@@ -499,7 +479,7 @@ Cada categoría documental se identifica mediante un código de tres letras util
 
 ### 7.2 Categorías vs subtipos
 
-Una categoría documental agrupa varios tipos de documento. El campo `document_subtype` (ver sección 5.2) permite precisar el tipo específico sin crear nuevas categorías.
+Una categoría documental agrupa varios tipos de documento. El campo `document_subtype` (ver §5.2) permite precisar el tipo específico sin crear nuevas categorías.
 
 Subtipos permitidos por categoría:
 
@@ -565,7 +545,7 @@ El presente estándar no introduce un campo explícito para distinguir fuerza no
 - Documentos `RES/*`, `POS/*`, `TEC/*` y similares tienen presunción **informativa** o **descriptiva**, incluso en `status: approved`.
 - Documentos en `status: draft` o `review` nunca tienen fuerza normativa, independientemente de su categoría.
 
-La distinción idioma-original vs traducción (sección 10.2) opera en una dimensión ortogonal: determina cuál instancia idiomática es la fuente normativa, no si toda ella lo es.
+La distinción idioma-original vs traducción (§10.2) opera en una dimensión ortogonal: determina cuál instancia idiomática es la fuente normativa, no si toda ella lo es.
 
 ### 7.5 Extensibilidad del modelo
 
@@ -584,7 +564,7 @@ No se permite la incorporación de nuevos valores controlados mediante extensió
 
 ## 8. Estados documentales
 
-Los estados documentales corresponden a los valores definidos para el campo `status` en la sección 5.4. Las transiciones entre estados siguen el ciclo de vida definido en esta sección.
+Los estados documentales corresponden a los valores definidos para el campo `status` en §5.4. Las transiciones entre estados siguen el ciclo de vida definido en esta sección.
 
 ### 8.1 Ciclo de vida y transiciones permitidas
 
@@ -614,9 +594,9 @@ Reglas:
 
 - `draft` → `review`: el documento entra en proceso de aprobación.
 - `review` → `draft`: requiere devolución con observaciones registradas.
-- `review` → `approved`: implica la actualización simultánea de `approval` conforme a la sección 14.
-- `approved` → `superseded`: se produce exclusivamente por la publicación de un documento que declara `relation: supersedes` (ver sección 5.3.1).
-- `approved` → `archived`: corresponde al retiro por obsolescencia sin reemplazo normativo (ver sección 8.2).
+- `review` → `approved`: implica la actualización simultánea de `approval` conforme a §14.
+- `approved` → `superseded`: se produce exclusivamente por la publicación de un documento que declara `relation: supersedes` (ver §5.3.1).
+- `approved` → `archived`: corresponde al retiro por obsolescencia sin reemplazo normativo (ver §8.2).
 - `draft` → `archived` y `review` → `archived`: retiro anticipado de un documento que no llegó a aprobación y no se continuará.
 
 ### 8.2 Distinción entre `superseded` y `archived`
@@ -631,7 +611,7 @@ Ambos son estados terminales, pero responden a circunstancias distintas:
 
 **Regla de decisión:**
 
-- Si se publica un nuevo documento `A` que reemplaza normativamente a `B` → `B` pasa a `superseded` (ver 5.3.1).
+- Si se publica un nuevo documento `A` que reemplaza normativamente a `B` → `B` pasa a `superseded` (ver §5.3.1).
 - Si se retira `B` por obsolescencia (proceso suprimido, política abandonada, período cerrado) sin documento que lo reemplace → `B` pasa a `archived`.
 
 **Ejemplos:**
@@ -675,7 +655,7 @@ Para retiro normativo sin pérdida de trazabilidad, usar los estados terminales 
 
 ## 9. Clasificación de información
 
-Los niveles de clasificación y sus valores permitidos están definidos en la sección 5.4.
+Los niveles de clasificación y sus valores permitidos están definidos en §5.4.
 
 ---
 
@@ -687,7 +667,7 @@ El idioma institucional principal del LTA es el español. Todo documento oficial
 
 ### 10.2 Traducciones
 
-Un mismo `document_id` identifica una obra institucional conceptual. Cada traducción constituye una **instancia idiomática** distinta de esa obra. La unicidad del `document_id` (ver sección 6.3) se entiende a nivel de **par(`document_id`, `language`)**: no pueden existir dos documentos con el mismo `document_id` y el mismo `language`.
+Un mismo `document_id` identifica una obra institucional conceptual. Cada traducción constituye una **instancia idiomática** distinta de esa obra. La unicidad del `document_id` (ver §6.3) se entiende a nivel de **par(`document_id`, `language`)**: no pueden existir dos documentos con el mismo `document_id` y el mismo `language`.
 
 Las traducciones de documentos oficiales a otros idiomas se identifican mediante el campo `language` en los metadatos.
 
@@ -878,7 +858,7 @@ Los documentos considerados oficiales requerirán:
 3. Aprobación formal.
 4. Publicación.
 
-La aprobación deberá quedar registrada en el campo `approval` de los metadatos, conforme a los estados definidos en la sección 5.4.
+La aprobación deberá quedar registrada en el campo `approval` de los metadatos, conforme a los estados definidos en §5.4.
 
 Durante la fase fundacional, la aprobación provisional mediante aceptación del equipo fundador es válida con `approval.status: "provisional"`. Una vez establecido el mecanismo formal de gobernanza, toda aprobación provisional deberá ser ratificada o reemplazada por una aprobación formal.
 
@@ -886,7 +866,7 @@ Durante la fase fundacional, la aprobación provisional mediante aceptación del
 
 ## 15. Revisión periódica
 
-Cada documento deberá definir una periodicidad de revisión en el campo `review_cycle`. Los valores permitidos están definidos en la sección 5.4.
+Cada documento deberá definir una periodicidad de revisión en el campo `review_cycle`. Los valores permitidos están definidos en §5.4.
 
 ---
 
@@ -899,7 +879,7 @@ Este estándar permanecerá vigente hasta que sea reemplazado por una versión p
 ## 17. Convenciones de nombres de archivo
 
 Las siguientes son recomendaciones institucionales para nombrar archivos de documentos oficiales. No son reglas de validación del `document_id` (ver
-sección 6) y no forman parte del identificador documental.
+§6) y no forman parte del identificador documental.
 
 Principios:
 
@@ -974,4 +954,5 @@ El formulario `§X.Y` es preferido cuando se cita una subsección concreta.
 | 0.1.2   | 2026-06-25 | Corrección de inconsistencias internas y normalización documental |
 | 0.2.0   | 2026-06-25 | Normalización de taxonomía documental con códigos, formalización de subtipos, modelo de aprobación con estados, valores controlados de metadata, política de traducciones con translation_of, SemVer documental con ejemplos aplicados |
 | 0.3.0   | 2026-06-25 | Modelo conceptual documento/instancia/versión (§3.1-§3.3), verbos modales RFC 2119 (§3.2), definición de documento oficial y repositorio institucional (§2.1-§2.2), política de reemplazo de documentos (§5.3.1), conjuntos cerrados de metadata (§5.4), asignación de identificadores (§6.3), carácter normativo vs informativo (§7.4), extensibilidad del modelo (§7.5), ciclo de vida documental con transiciones permitidas (§8.1-§8.4), eliminación de `rejected` en approval.status, modelo de traducciones con independencia de versionado (§10.2), obligaciones de modificación y cambios incompatibles (§11.1-§11.2), formalización del historial de cambios (§12), convenciones de nombres de archivo (§17), referencias normativas e informativas (§18) |
+| 0.3.1   | 2026-06-26 | Normalización de referencias cruzadas con formato canónico (§X.Y), eliminación de tabla de subtipos duplicada (§5.2), remoción de `related_documents` huérfano (LTA-CHR-001 no creado), normalización de espaciado y ajustes de línea |
 ---
