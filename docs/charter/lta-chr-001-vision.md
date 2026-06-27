@@ -4,7 +4,7 @@ title: "Visión Institucional"
 
 document_id: "LTA-CHR-001"
 version: "0.1.0"
-status: "review"
+status: "draft"
 document_type: "CHR"
 document_subtype: "vision"
 classification: "public"
@@ -16,7 +16,7 @@ authors:
 owner: "Dirección Estratégica"
 
 created: "2026-06-26"
-updated: "2026-06-26"
+updated: "2026-06-27"
 
 review_cycle: "annual"
 
