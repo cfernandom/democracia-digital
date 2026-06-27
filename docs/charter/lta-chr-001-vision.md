@@ -33,11 +33,7 @@ license: "CC BY 4.0"
 approval:
   status: "pending"
 
-related_documents:
-  - id: "LTA-CHR-002"
-    relation: "references"
-  - id: "LTA-CHR-003"
-    relation: "references"
+related_documents: []
 ---
 
 # Visión Institucional
